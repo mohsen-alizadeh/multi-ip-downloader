@@ -5,7 +5,7 @@ include_once 'config.php';
 include_once 'functions.php';
 
 
-$url = 'http://localhost/data/paper.pdf';
+$url = $argv[1];
 $output = basename($url);
 
 if(!is_support_range_download($url))
