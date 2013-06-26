@@ -34,3 +34,33 @@ function is_support_range_download($url)
 
 	return false;
 }
+
+function download_range($url , $ip, $startByte, $endByte)
+{
+	$ch = curl_init($url);
+
+	curl_setopt($ch, CURLOPT_INTERFACE, $ip);
+	curl_setopt($ch, CURLOPT_RANGE, "$startByte-$endByte");
+
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+	return curl_exec($ch);
+}
+
+function split_file_size($size, $count)
+{
+	$result = array();
+	$slice = (int)( $size / $count );
+
+	for($i=1; $i<= $count; $i++)
+	{
+		$result[$i]['start'] = ($i-1 ) * $slice;
+
+		if($i == $count)
+			$result[$i]['end'] = $size;
+		else
+			$result[$i]['end'] = (($i ) * $slice) -1;
+	}
+
+	return array_values($result);
+}
