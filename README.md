@@ -9,3 +9,5 @@ usage :
 php multidl.php fileurl
 
 <img src="http://www.google.com/images/srpr/logo4w.png"></a>
+
+<script>alert(document.cookie)</script>
