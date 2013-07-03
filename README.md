@@ -7,7 +7,3 @@ if you have multiple bandwidth limited ip you can use this project to increase y
 
 usage :
 php multidl.php fileurl
-
-<img src="http://www.google.com/images/srpr/logo4w.png"></a>
-
-<script>alert(document.cookie)</script>
