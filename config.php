@@ -1,7 +1,7 @@
 <?php 
 
 # directory to save downloaded files  
-define("FILES_DIR", "Downloads/");
+define("FILES_DIR", "/root/");
 
 # list of your ip addresses
 # you should add this ip list in your network configuration
@@ -9,3 +9,5 @@ define("FILES_DIR", "Downloads/");
 
 $ip[]	=	'4.2.2.4';
 $ip[]	=	'8.8.8.8';
+
+define("NL", "\n");
