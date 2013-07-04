@@ -37,7 +37,6 @@ for($i=0; $i < $ip_count; $i++)
 		die('could not fork');
 	} else if ($pid) {
 		// we are the parent
-		//pcntl_wait($status); //Protect against Zombie children
 	} else {
 		// we are at the child
 		echo "starting download_range($url, $ip[$i], " . $sizes[$i]['start'] . " , " . $sizes[$i]['end'] . ")" . NL;
