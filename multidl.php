@@ -4,6 +4,8 @@
 include_once 'config.php';
 include_once 'functions.php';
 
+$start_time = time();
+
 echo "project started" . NL;
 
 $url = $argv[1];
@@ -69,7 +71,11 @@ while(1)
 			unlink(FILES_DIR . $output . '.' . $i);
 		}
 		
-		die("Download completed\n");
+		$finish_time = time();
+		echo "Download completed " . NL;
+		echo "download time: " . ( $finish_time - $start_time ) . " Seconds" . NL;
+		echo "download speed : " .  $file_size / ( $finish_time - $start_time ) / 1024 . ' KB Per Second' . NL;     
+		die();
 	}
 	
 }
