@@ -1,9 +1,10 @@
-multidl
+multi ip downloader
 =======
 
-multi ip downloader
-
-if you have multiple bandwidth limited ip you can use this project to increase your download speed
+if you have multiple bandwidth limited ip you can use this program to increase your download speed
 
 usage :
-php multidl.php fileurl
+edit config.php and enter your ip list then run program
+php multidl.php "fileurl"
+
+
